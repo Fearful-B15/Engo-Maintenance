@@ -19,7 +19,7 @@
       color: white;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
@@ -27,12 +27,7 @@
     .top-nav h1 {
       margin: 0;
       font-size: 24px;
-    }
-
-    .top-nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+      text-align: center;
     }
 
     /* Centered Welcome Section */
@@ -47,32 +42,25 @@
     }
 
     .welcome-section h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #3264A1;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
-    .welcome-section p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 500px;
-    }
-
-    .welcome-section a {
-      display: inline-block;
+    .info-box {
       background-color: #3264A1;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      text-align: left;
+      line-height: 1.6;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    .welcome-section a:hover {
-      background-color: #fff;
-      color: #3264A1;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    .info-box p {
+      margin-bottom: 15px;
+      font-size: 1rem;
     }
 
     footer {
@@ -87,7 +75,11 @@
 
     @media (max-width: 768px) {
       .welcome-section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+      .info-box {
+        padding: 20px;
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -95,19 +87,37 @@
 <body>
   <!-- Top Navigation -->
   <div class="top-nav">
-    <h1>Welcome</h1>
-    <a href="login.php">Login</a>
+    <h1>Welcome to Engo Child & Youth Care System</h1>
   </div>
 
   <!-- Main Welcome Section -->
   <div class="welcome-section">
-    <h2>Welcome to Our Website</h2>
-    <p>We’re glad to have you here! Explore our content, connect with us, and enjoy your visit.</p>
-    <a href="login.php">Get Started</a>
+    <h2>Maintenance Report Management System</h2>
+    <div class="info-box">
+      <p>
+        The <strong>Maintenance Report Management System</strong> was designed to
+        modernize how Engo manages maintenance tasks across its child and youth care
+        facilities. It replaces manual reporting with a centralized digital platform
+        for submitting requests, tracking progress, and generating reports.
+      </p>
+      <p>
+        This system enhances communication between staff, caretakers, and maintenance
+        teams, reducing downtime, minimizing risk, and improving safety and comfort
+        for children and staff. It promotes accountability and efficiency through
+        real-time updates and record-keeping.
+      </p>
+      <p>
+        <strong>About Engo:</strong> Engo is a respected non-profit welfare
+        organization in the Free State, South Africa, with over a century of service.
+        Originating in 1902, Engo has grown from early child care centers into a
+        province-wide network dedicated to protecting, educating, and nurturing
+        vulnerable children and youth through community-based care programs.
+      </p>
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 Your Company Name. All rights reserved.
+    &copy; 2025 Engo Child and Youth Care System. All rights reserved.
   </footer>
 </body>
 </html>
