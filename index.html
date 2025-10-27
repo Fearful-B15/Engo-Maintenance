@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome Page</title>
   <style>
-    /* Reset and basic setup */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #4e54c8, #8f94fb);
-      color: #fff;
-      height: 100vh;
+      margin: 0;
+      background: #d6d6d6;
+      color: #000;
+    }
+
+    /* Top navigation */
+    .top-nav {
+      height: 60px;
+      background: #3264A1;
+      color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-nav h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Centered Welcome Section */
+    .welcome-section {
+      display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 60px);
       text-align: center;
+      padding: 0 20px;
     }
 
-    h1 {
-      font-size: 3rem;
+    .welcome-section h2 {
+      font-size: 2.5rem;
+      color: #3264A1;
       margin-bottom: 10px;
-      letter-spacing: 2px;
     }
 
-    p {
+    .welcome-section p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       max-width: 500px;
     }
 
-    a {
+    .welcome-section a {
       display: inline-block;
-      background-color: #fff;
-      color: #4e54c8;
+      background-color: #3264A1;
+      color: #fff;
       padding: 12px 25px;
       border-radius: 25px;
       text-decoration: none;
@@ -47,24 +69,42 @@
       transition: all 0.3s ease;
     }
 
-    a:hover {
-      background-color: #4e54c8;
-      color: #fff;
+    .welcome-section a:hover {
+      background-color: #fff;
+      color: #3264A1;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     footer {
       position: absolute;
       bottom: 15px;
+      width: 100%;
+      text-align: center;
       font-size: 0.9rem;
       opacity: 0.8;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .welcome-section h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Our Website</h1>
-  <p>We’re glad to have you here! Explore our content, connect with us, and enjoy your visit.</p>
-  <a href="#">Get Started</a>
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <h1>Welcome</h1>
+    <a href="login.php">Login</a>
+  </div>
+
+  <!-- Main Welcome Section -->
+  <div class="welcome-section">
+    <h2>Welcome to Our Website</h2>
+    <p>We’re glad to have you here! Explore our content, connect with us, and enjoy your visit.</p>
+    <a href="login.php">Get Started</a>
+  </div>
 
   <footer>
     &copy; 2025 Your Company Name. All rights reserved.
