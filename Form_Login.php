@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($row = $result->fetch_assoc()) {
             if ($password === $row['Password']) {
                 $_SESSION['employee_id'] = $row['ID'];
-                header('Location: Dashboard.php');
+                header('Location: Form.php');
                 exit;
             } else {
                 $error = 'Invalid ID or password.';
@@ -198,7 +198,7 @@ $conn->close();
         <?php if ($error): ?>
             <p class="error"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
-        <form method="post" action="Form.php">
+        <form method="post" action="">
             <label for="id">Employee ID:</label>
             <input type="text" name="id" id="id" required>
 

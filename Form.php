@@ -3,7 +3,7 @@ session_start();
 
 // Redirect if not logged in
 if (!isset($_SESSION['employee_id'])) {
-    header("Location: login.php");
+    header("Location: Form_Login.php");
     exit;
 }
 

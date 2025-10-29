@@ -3,7 +3,7 @@ session_start();
 
 // Redirect to login if not logged in
 if (!isset($_SESSION['employee_id'])) {
-    header("Location: login.php");
+    header("Location:Index.php");
     exit;
 }
 
@@ -107,7 +107,7 @@ $employee_id = $_SESSION['employee_id'];
     <div class="top-nav">
         <span class="menu-toggle" onclick="toggleMenu()">☰</span>
         <h1>Dashboard</h1>
-        <a href="Login.php">Logout</a>
+        <a href="Index.php">Logout</a>
     </div>
 
     <!-- Side Navigation -->
